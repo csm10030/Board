@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.devfox.board.service.dao.UserDAO">
+
+	<select id="selectUserList" resultType="UserVO"> 
+		SELECT * FROM USER_INFO
+		ORDER BY USER_NO ASC
+	</select>
+	
+	<select id="checkUserId" parameterType="String" resultType="int">
+		SELECT COUNT(*)
+		FROM USER_INFO
+		WHERE USER_ID = #{userId}
+	</select>
+	
+	<select id="checkUserNo" parameterType="UserVO" resultType="int">
+		SELECT COUNT(*)
+		FROM USER_INFO
+		WHERE USER_ID = #{userId}
+	</select>
+	
+	<insert id="joinUser" parameterType="UserVO">
+		INSERT INTO USER_INFO(USER_NO, USER_ID, USER_PW)
+		VALUES (
+			USER_NO.NEXTVAL
+			, #{userId}
+			, #{userPw}
+		)
+	</insert>
+	
+	<update id="updateUser" parameterType="UserVO">
+		UPDATE USER_INFO
+		SET USER_RL = #{userRl}
+		WHERE USER_ID = #{userId}
+	</update>
+	
+	<select id="loginUser" parameterType="UserVO" resultType="UserVO">
+		SELECT USER_NO, USER_ID, USER_RL, USER_MC
+		FROM USER_INFO
+		WHERE USER_ID = #{userId}
+		AND USER_PW = #{userPw}
+	</select>
+</mapper>

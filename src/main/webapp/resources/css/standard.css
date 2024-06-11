@@ -1,0 +1,301 @@
+@charset "UTF-8";
+
+/* mobile */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+/* header */
+header {
+	height: 180px;
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+	font-size: 1.8em;
+	font-family: fantasy;
+}
+h1 {
+	cursor: pointer;
+}
+h1:hover{
+	color: silver;
+}
+#Open_Aside_Button {
+	float: left;
+	line-height: 1px;
+}
+
+/* aside */
+aside {
+	height: 801px;
+	width: 100%;
+	float: left;
+	padding-top: 9px;
+	border-right: 1px solid;
+}
+ul {
+	list-style: none;
+}
+
+ul li{
+	margin: 12px;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	color: silver;
+}
+ul li a:hover {
+	border-bottom: 1px solid red;
+}
+#Login_Button, #Logout_Button {
+	border: 1px solid blue;
+	color: blue;
+}
+#Join_User_Button {
+	margin-left: 12px;
+	border: 1px solid red;
+	color: red;
+}
+#Login_Button:hover, #Logout_Button:hover, #Join_User_Button:hover{
+	color: aqua;
+	border: 1px solid aqua; 
+}
+#Close_Aside_Button {
+	float: right;
+	padding-top: 0px;
+	padding-right: 9px;
+	cursor: pointer;
+}
+
+/* body */
+body {
+	height: 801px;
+	float: left;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+body div {
+	height: 801px;
+	width: 100%;
+	float: left;
+	padding: 36px;
+}
+
+/* login & join */
+#Login_Join_Form table {
+	margin: auto;
+	width: 80%;
+	border: 1px solid;
+	font-size: 1.2em;
+}
+#Login_Join_Form table tr {
+	height: 60px;
+}
+#Login_Join_Form table tr:nth-child(1) {
+	height: 120px;
+	font-size: 3.0em;
+}
+#Login_Join_Form table tr td {
+	text-align: center;
+}
+#Login_Join_Form table tr td input {
+	height: 30px;
+	width: 75%;
+}
+#Login_Join_Form table tr td button {
+	margin-top: 90px;
+	margin-bottom: 30px;
+	padding: 6px;
+	font-size: 1.2em;
+	border: 1px solid blue;
+	background-color: white;
+	color: blue;
+}
+#Login_Join_Form table tr td button:hover {
+	color: aqua;
+	border: 1px solid aqua; 
+}
+
+/* board */
+#Frame_Set {
+	text-align: center;
+}
+
+#Frame_Set table {
+	width: 100%;
+	text-align: left;
+}
+#Frame_Set table tr {
+	height: 36px;
+}
+.boardList td:nth-child(1) {
+	width: 10%;
+	text-align: center;
+}
+.boardList td:nth-child(2) {
+	width: 60%;
+}
+.boardList td:nth-child(3) {
+	width: 30%;
+}
+#Read_Button{
+	width: 100%;
+	text-align: left;
+}
+#Read_Button:hover{
+	color: gray;
+}
+#Create_Read_Update_Form {
+	text-align: center;
+}
+#Create_Read_Update_Form table{
+	margin: auto;
+	width: 80%;
+	border: 1px solid;
+	text-align: left;
+	font-size: 1.2em;
+}
+#Create_Read_Update_Form table tr {
+	height: 48px;
+}
+#Create_Read_Update_Form table tr td {
+	height: 48px;
+	text-align: center;
+}
+#Create_Read_Update_Form table tr td input {
+	height: 48px;
+	width: 100%;
+	margin-right: 30px;
+	font-size: 1.8em;
+}
+#Create_Read_Update_Form table tr td textarea {
+	height: 360px;
+	width: 100%;
+	resize: none;
+	font-size: 1.8em;
+}
+#Create_Board_Button, #Create_Read_Update_Form button {
+	margin: 6px;
+	padding: 6px;
+	font-size: 1.2em;
+	background-color: white;
+	color:blue;
+	border: 1px solid blue;
+	cursor: pointer;
+}
+#Create_Board_Button:hover, #Create_Read_Update_Form table tr td button:hover {
+	color: aqua;
+	border: 1px solid aqua; 
+}
+#Update_Board_Button {
+	border: 1px solid green;
+	color: green;
+}
+#Update_Board_Button:hover {
+	border: 1px solid gray;
+	color: gray;
+}
+#Delete_Board_Form{
+	text-align: center;
+}
+#Delete_Board_Button {
+    margin-bottom: 30px;
+    padding: 6px;
+    font-size: 1.2em;
+    background-color: white;
+    border: 1px solid red;
+	color: red;
+    cursor: pointer;
+}
+#Delete_Board_Button:hover {
+	border: 1px solid gray; 
+	color: gray;
+}
+#Read_Button {
+	border: none;
+	font-size: 1.2em;
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+#Read_Button:hober {
+	color: aqua;
+	border: 1px solid aqua; 
+}
+.pagenate {
+	margin-top: 12px;
+    padding: 0px;
+    box-sizing: border-box;
+	height: 24px;
+    width: 100%;
+}
+
+/* footer */
+footer {
+	width: 100%;
+	float: left;
+	padding: 30px;
+	border-top: 1px solid;
+	font-size: 1.2em;
+	font-family: fantasy;
+}
+footer a {
+	padding: 0px;
+}
+
+.error {
+	color: red;
+}
+
+/* wide mobile */
+@media (min-width: 576px) {
+
+} 
+
+/* tablet */
+@media (min-width: 768px) {
+
+} 
+
+/* desktop */
+@media (min-width: 992px) {
+	header {
+		height: 135px;
+		width: 100%;
+		float: left;
+		border-bottom: 1px solid;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
+	aside {
+		height: 801px;
+		width: 24%;
+		float: left;
+		padding-top: 9px;
+	}
+	body {
+		height: 801px;
+		width: 100%;
+		float: left;
+		font-size: 1.0em;
+		font-weight: normal;
+	}
+} 
+
+/* big screen desktop */
+@media (min-width: 1200px) {
+
+}
